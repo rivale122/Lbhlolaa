@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Lbhla 💕</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ffb6e6,#c084fc);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.page{
+display:none;
+text-align:center;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+width:320px;
+}
+
+.active{
+display:block;
+}
+
+button{
+padding:12px 25px;
+margin:10px;
+border:none;
+border-radius:15px;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+.yes{
+background:#7ed957;
+color:white;
+}
+
+.no{
+background:#ff5f7e;
+color:white;
+position:relative;
+}
+</style>
+
+</head>
+<body>
+
+<div id="p1" class="page active">
+<h2>Hey Lbhlaaa 💕</h2>
+<p>Are you ready? 👀</p>
+<button class="yes" onclick="next(2)">Yesss 💖</button>
+</div>
+
+<div id="p2" class="page">
+<h2>Question 1 🤭</h2>
+<p>Are you still mad at me? 🥺</p>
+<button class="yes" onclick="moveBtn(this)">Yes 😒</button>
+<button class="no" onclick="next(3)">Nope ❤️</button>
+</div>
+
+<div id="p3" class="page">
+<h2>Please...🥹</h2>
+<p>Can you give me one more chance?</p>
+<button class="yes" onclick="next(4)">Okk 💕</button>
+<button class="no" onclick="moveBtn(this)">Nope 😤</button>
+</div>
+
+<div id="p4" class="page">
+<h2>One last question 🩷</h2>
+<p>Do you love me babyyy?🥹</p>
+
+<button class="yes" onclick="next(5)">Yesss💗</button>
+
+<button class="no" onclick="cry()">
+Nope 💔
+</button>
+
+</div>
+
+<div id="p5" class="page">
+<h1>YAYYYYY🥹💕</h1>
+
+<h2>We're friends again!!</h2>
+
+<p>I missed you sooo much my Lbhlaaa 🤍</p>
+
+<p>Love youuuu 💗</p>
+
+</div>
+
+<script>
+
+function next(num){
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+document.getElementById("p"+num).classList.add("active");
+}
+
+function moveBtn(btn){
+btn.style.position="absolute";
+btn.style.left=Math.random()*250+"px";
+btn.style.top=Math.random()*350+"px";
+}
+
+function cry(){
+alert("🐱💔 Hello Kitty is crying because of you 😭");
+}
+
+</script>
+
+</body>
+</html>
